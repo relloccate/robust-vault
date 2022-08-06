@@ -4,7 +4,7 @@
 
 # Robust Vault
 
-### Backup your data from anywhere to anywhere.
+### Backup your data from anywhere to anywhere (local drives only).
 
     Only for local computer disks, cloud backups are not available (yet).
     Support platforms: Windows (x32, x64).
