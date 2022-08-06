@@ -1,0 +1,14 @@
+gh.mjs
+node_modules
+
+.DS_Store
+dist
+dist-ssr
+*.local
+.debug.env
+unused_trash
+Crypto.ts
+Request.ts
+tmp
+**/.tmp
+release

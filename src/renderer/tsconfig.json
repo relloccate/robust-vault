@@ -1,0 +1,21 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "strict": true,
+        "moduleResolution": "node",
+        "useDefineForClassFields": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "front/*": ["./*"],
+            "core/*": ["../core/*"],
+            "types/*": ["../@types/*"]
+        },
+        "esModuleInterop": true,
+        "lib": ["esnext", "dom"]
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "src/**/*.postcss"]
+    // "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+}

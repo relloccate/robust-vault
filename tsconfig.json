@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "strict": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "jsx": "preserve",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "baseUrl": "./",
+        "paths": {
+            "front/*": ["./src/renderer/*"],
+            "core/*": ["./src/core/*"],
+            "types/*": ["./src/@types/*"]
+        },
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true
+    }
+}
