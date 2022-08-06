@@ -2,6 +2,7 @@
     "name": "robust-vault",
     "version": "0.1.0",
     "main": "dist/main/index.cjs",
+    "description": "Backup your data from anywhere to anywhere (local drives only).",
     "scripts": {
         "dev": "node scripts/watch.mjs",
         "build": "vue-tsc --noEmit --p src/renderer/tsconfig.json && node scripts/build.mjs"
