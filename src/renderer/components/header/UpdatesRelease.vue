@@ -37,7 +37,6 @@ export default {
     },
     computed: {
         getFilteredAssets() {
-            console.log(this.release.assets);
             return this.release.assets.filter(asset => {
                 if (asset.browser_download_url.endsWith('.yml')) return false;
                 if (asset.browser_download_url.endsWith('.blockmap')) return false;
