@@ -1,7 +1,6 @@
 import { build as viteBuild } from 'vite';
 import { build as electronBuild } from 'electron-builder';
 import { rm } from 'fs/promises';
-import { token } from '../gh.mjs';
 
 console.log('CLEARING DIST DIR');
 await rm('./dist', { recursive: true, force: true });
@@ -17,8 +16,8 @@ console.log('BUILDING APP');
 await electronBuild({
     publish: 'always',
     config: {
-        files: ['dist'],
-        appId: 'YourAppID',
+        // files: ['dist'],
+        appId: 'relloccate.robust-vault.app',
         asar: true,
         directories: {
             output: 'dist/release/${version}'
@@ -27,17 +26,13 @@ await electronBuild({
             icon: 'src/main/assets/1.ico',
             target: [
                 {
+                    target: 'nsis',
+                    arch: ['x64', 'ia32']
+                },
+                {
                     target: 'zip',
-                    arch: ['x64']
+                    arch: ['x64', 'ia32']
                 }
-                // {
-                //     target: 'nsis',
-                //     arch: ['x64', 'ia32']
-                // },
-                // {
-                //     target: 'zip',
-                //     arch: ['x64', 'ia32']
-                // }
             ],
             artifactName: '${name}-v${version}-${arch}-${os}.${ext}'
         },
@@ -56,8 +51,7 @@ await electronBuild({
         publish: {
             provider: 'github',
             owner: 'relloccate',
-            repo: 'robust-vault',
-            token
+            repo: 'robust-vault'
         }
     }
 })
